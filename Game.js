@@ -22,15 +22,15 @@ module.exports = class Game{
                 break;
             case GameState.FLAT:
                 if(sInput.toLowerCase().match("wait")){
-                    sReply = "The road is deserted. After 1 hour there is still no help. Do you keep Waiting or do you go to the house?";
+                    sReply = "The road is deserted. After 1 hour there is still no help. Do you keep Waiting or do you GO to the house?";
                 }else{
-                    sReply ="On the door is a large knocker. Do you knock or run back to your car to wait?";
+                    sReply ="On the door is a large knocker. Do you knock or RUN back to your car to WAIT?";
                     this.stateCur = GameState.MANSION;
                 }
                 break;
             case GameState.MANSION:
                 if(sInput.toLowerCase().match("knock")){
-                    sReply = "The door opens and you are greeted by a hunch-back butler. He asks you to come in. Do you go in or run back to the car?"
+                    sReply = "The door opens and you are greeted by a hunch-back butler. He asks you to come in. Do you GO in or RUN back to the car?"
                     this.stateCur = GameState.BUTLER;
                 }else{
                     sReply = "The road is deserted. After 1 hour there is still no help. Do you keep Waiting or do you go to the house?";
